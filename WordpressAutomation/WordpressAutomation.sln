@@ -3,16 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{81B2815A-DC29-4749-A2CB-967009E14823}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordpressAutomation", "WordpressAutomation\WordpressAutomation.csproj", "{5F26A79B-38A4-4C3E-9C01-D3B66931C6E2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C22D97D-59D3-4DAA-A65A-0DBB274544E2}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WordpressAutomation", "src\WordpressAutomation\WordpressAutomation.xproj", "{C1E68299-617D-4D30-B8C6-1CF0C1D25278}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{EDB8996D-C108-49E0-A001-3AD608842C21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPressTests", "WordPressTests\WordPressTests.csproj", "{116E41DC-A164-45E6-B63D-B42F9E7338FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,19 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C1E68299-617D-4D30-B8C6-1CF0C1D25278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1E68299-617D-4D30-B8C6-1CF0C1D25278}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1E68299-617D-4D30-B8C6-1CF0C1D25278}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1E68299-617D-4D30-B8C6-1CF0C1D25278}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDB8996D-C108-49E0-A001-3AD608842C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDB8996D-C108-49E0-A001-3AD608842C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDB8996D-C108-49E0-A001-3AD608842C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDB8996D-C108-49E0-A001-3AD608842C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F26A79B-38A4-4C3E-9C01-D3B66931C6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F26A79B-38A4-4C3E-9C01-D3B66931C6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F26A79B-38A4-4C3E-9C01-D3B66931C6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F26A79B-38A4-4C3E-9C01-D3B66931C6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116E41DC-A164-45E6-B63D-B42F9E7338FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116E41DC-A164-45E6-B63D-B42F9E7338FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116E41DC-A164-45E6-B63D-B42F9E7338FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116E41DC-A164-45E6-B63D-B42F9E7338FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C1E68299-617D-4D30-B8C6-1CF0C1D25278} = {81B2815A-DC29-4749-A2CB-967009E14823}
 	EndGlobalSection
 EndGlobal
