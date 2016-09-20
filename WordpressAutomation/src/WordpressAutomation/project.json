@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-*",
+  "description": "WordpressAutomation Class Library",
+  "authors": [ "Arun" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "System.Collections": "4.0.10-beta-23019",
+    "System.Linq": "4.0.0-beta-23019",
+    "System.Threading": "4.0.10-beta-23019",
+    "System.Runtime": "4.0.10-beta-23019",
+    "Microsoft.CSharp": "4.0.0-beta-23019",
+    "Microsoft.TypeScript.Compiler": "1.8.11",
+    "Selenium.WebDriver": "2.53.1",
+    "Selenium.WebDriver.ChromeDriver": "2.24.0",
+    "Selenium.WebDriver.IEDriver": "2.53.1.1"
+  },
+
+  "frameworks": {
+    "dotnet": { },
+    "dnx451": { }
+  }
+}
