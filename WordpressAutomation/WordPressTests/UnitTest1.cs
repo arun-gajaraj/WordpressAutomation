@@ -10,7 +10,7 @@ namespace WordPressTests
         [TestMethod]
         public void TestMethod1()
         {
-            var c = new Class1();
+            var c = new LoginPage();
             c.Go(); 
         }
         

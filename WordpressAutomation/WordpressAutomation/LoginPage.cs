@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 
 namespace WordpressAutomation
 {
-    public class Class1
+    public class LoginPage
     {
         public void Go() {
-            //var driver = new FirefoxDriver();
+            //IWebDriver driver = new FirefoxDriver();
             IWebDriver driver = new ChromeDriver(@"E:\Work\Selenium\CSharp");
 
             driver.Navigate().GoToUrl(@"http://localhost:8080/wp/wp-login.php");
-            //driver.Navigate().GoToUrl("http://google.com");
+            
 
-            //driver.go
+            
         }
 
         public static void Main() {
-            var cl = new Class1();
+            var cl = new LoginPage();
             cl.Go();
         }
         
