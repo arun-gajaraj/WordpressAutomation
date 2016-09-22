@@ -11,20 +11,51 @@ namespace WordpressAutomation
 {
     public class LoginPage
     {
-        public void Go() {
-            //IWebDriver driver = new FirefoxDriver();
-            IWebDriver driver = new ChromeDriver(@"E:\Work\Selenium\CSharp");
-
-            driver.Navigate().GoToUrl(@"http://localhost:8080/wp/wp-login.php");
-            
-
-            
-        }
-
-        public static void Main() {
-            var cl = new LoginPage();
-            cl.Go();
-        }
         
+
+
+        //public static void Main() {
+        //    var cl = new LoginPage();
+        //    cl.Go();
+        //}
+
+        public static void GoTo()
+        {
+            Driver.Instance.Navigate().GoToUrl(@"http://localhost:8080/wp/wp-login.php");
+
+            
+        }
+
+        public static LoginCommand LogInAs(String userName)
+        {
+            var loginCommand = new LoginCommand();
+            loginCommand.userName = userName;
+            return loginCommand;
+            
+        }
+
+        public class LoginCommand
+        {
+            internal string userName;
+            internal string password;
+
+        public LoginCommand withPassword(string v)
+            {
+                this.password = v;
+                return this;
+            }
+
+            public void Login()
+            {
+                var loginInput = Driver.Instance.FindElement(By.Id("user_login"));
+                loginInput.SendKeys(userName);
+
+                var passwordInput = Driver.Instance.FindElement(By.Id("user_pass"));
+                passwordInput.SendKeys(password);
+
+                var loginButton = Driver.Instance.FindElement(By.Id("wp-submit"));
+                loginButton.Click();
+            }
+        }
     }
 }
