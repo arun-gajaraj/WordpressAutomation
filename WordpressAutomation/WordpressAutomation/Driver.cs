@@ -8,7 +8,7 @@ namespace WordpressAutomation
         public static IWebDriver Instance { get; set; }
 
         public static IWebDriver Initialize() {
-            Instance = new ChromeDriver(@"E:\Work\Selenium\CSharp");
+            Instance = new ChromeDriver(@"C:\iCode\Selenium\Drivers");
             Instance.Manage().Timeouts().ImplicitlyWait(System.TimeSpan.FromSeconds(5));
             return Instance;
         }
