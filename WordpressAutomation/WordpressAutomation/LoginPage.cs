@@ -26,6 +26,7 @@ namespace WordpressAutomation
             var wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
             wait.Until(s => s.SwitchTo().ActiveElement().GetAttribute("id") == "user_login");
             
+            
         }
 
         public static LoginCommand LogInAs(String userName)

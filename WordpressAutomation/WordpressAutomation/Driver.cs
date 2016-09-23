@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace WordpressAutomation
@@ -13,6 +14,9 @@ namespace WordpressAutomation
             return Instance;
         }
 
-
+        public static void Close()
+        {
+            Instance.Close();
+        }
     }
 }
