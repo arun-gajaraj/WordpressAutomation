@@ -4,9 +4,11 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WordPressTests;
 
 namespace WordpressAutomation
 {
@@ -37,6 +39,14 @@ namespace WordpressAutomation
             
         }
 
+        public static void doLogin()
+        {
+            LoginPage.GoTo();
+            LoginPage.LogInAs("arun").withPassword("arun12").Login();
+            Assert.IsTrue(Driver.Instance.Title == "Dashboard ‹ iBlog — WordPress");
+            Assert.IsTrue(DashboardPage.IsAt, "Failed to Login");
+        }
+
         public class LoginCommand
         {
             internal string userName;
@@ -59,6 +69,8 @@ namespace WordpressAutomation
                 var loginButton = Driver.Instance.FindElement(By.Id("wp-submit"));
                 loginButton.Click();
             }
+
+            
         }
     }
 }

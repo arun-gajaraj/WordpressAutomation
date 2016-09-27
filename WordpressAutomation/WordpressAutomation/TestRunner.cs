@@ -17,11 +17,13 @@ namespace WordpressAutomation
                 Driver.Initialize();
 
                 ///Login Methods
+                LoginPage.doLogin();
+                
 
-                LoginPage.GoTo();
-                LoginPage.LogInAs("arun").withPassword("arun12").Login();
-                Assert.IsTrue(Driver.Instance.Title == "Dashboard ‹ iBlog — WordPress");
-                Assert.IsTrue(DashboardPage.IsAt, "Failed to Login");
+
+
+
+
 
                 ///Cleanup Methods
                 Driver.Close();
