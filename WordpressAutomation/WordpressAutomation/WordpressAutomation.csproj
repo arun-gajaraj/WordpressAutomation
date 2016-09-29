@@ -67,6 +67,7 @@
     <Compile Include="Driver.cs" />
     <Compile Include="LoginPage.cs" />
     <Compile Include="NewPostPage.cs" />
+    <Compile Include="PostPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestRunner.cs" />
   </ItemGroup>

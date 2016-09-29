@@ -30,7 +30,7 @@ namespace WordpressAutomation
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e);
                 //Driver.Close();
             }
         }

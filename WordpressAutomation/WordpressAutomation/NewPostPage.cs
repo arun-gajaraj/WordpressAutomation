@@ -11,7 +11,7 @@ namespace WordpressAutomation
     {
         public static void Goto()
         {
-            Driver.Instance.Navigate().GoToUrl("");
+            Driver.Instance.FindElement(By.LinkText("Write your first blog post")).Click();
         }
 
         public static CreatepostCommand createPost(string v)
@@ -24,21 +24,24 @@ namespace WordpressAutomation
             public static String TitleText;
             public static String PostBody;
 
-            public CreatepostCommand(String v)
+            public CreatepostCommand(String title)
             {
-                TitleText = v;
+                TitleText = title;
             }
 
-            public CreatepostCommand withBody(string v)
+            public CreatepostCommand withBody(string bodytext)
             {
-                PostBody = v;
+                PostBody = bodytext;
                 return this;
             }
 
             public void Publish()
             {
                 //Click on the Publish Button with other inputs
-                Driver.Instance.FindElement(By.Id("")).Click();
+                Driver.Instance.FindElement(By.XPath(@"//*[@id='titlewrap']/input")).SendKeys(TitleText);
+                Driver.Instance.FindElement(By.CssSelector("#tinymce")).SendKeys(PostBody);
+
+                Driver.Instance.FindElement(By.CssSelector("#publish")).Click();
 
 
             }
@@ -46,7 +49,7 @@ namespace WordpressAutomation
 
         public static void GoToNewPost()
         {
-            Driver.Instance.Navigate().GoToUrl("");
+            Driver.Instance.FindElement(By.LinkText("view post")).Click();
         }
     }
 }
