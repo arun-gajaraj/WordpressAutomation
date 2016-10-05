@@ -15,6 +15,7 @@ namespace WordPressTests
         public void Init()
         {
             Driver.Initialize();
+            Driver.Instance.Manage().Window.Maximize();
         }
 
         [TestMethod]
@@ -27,8 +28,13 @@ namespace WordPressTests
             NewPostPage.createPost("New Post Tiltle")
                 .withBody("The BODY!")
                 .Publish();
+
             NewPostPage.GoToNewPost();
+
             //Assert.AreEqual( PostPage.Title , "New Post Tiltle","Not the new post!");
+
+            Assert.AreEqual( PostPage.Title , "New Post Tiltle"+" - iBlog","Not the new post!");
+
 
 
         }
