@@ -39,7 +39,10 @@ namespace WordpressAutomation
             {
                 //Click on the Publish Button with other inputs
                 Driver.Instance.FindElement(By.XPath(@"//*[@id='titlewrap']/input")).SendKeys(TitleText);
-                Driver.Instance.FindElement(By.CssSelector("#tinymce")).SendKeys(PostBody);
+                //Driver.Instance.FindElement(By.CssSelector("#tinymce")).SendKeys(PostBody);
+                Driver.Instance.SwitchTo().Frame("content_ifr");
+                Driver.Instance.SwitchTo().ActiveElement().SendKeys(PostBody);
+                Driver.Instance.SwitchTo().DefaultContent();
 
                 Driver.Instance.FindElement(By.CssSelector("#publish")).Click();
 
@@ -49,7 +52,7 @@ namespace WordpressAutomation
 
         public static void GoToNewPost()
         {
-            Driver.Instance.FindElement(By.LinkText("view post")).Click();
+            Driver.Instance.FindElement(By.LinkText("View post")).Click();
         }
     }
 }
