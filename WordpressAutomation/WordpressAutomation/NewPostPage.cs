@@ -44,7 +44,7 @@ namespace WordpressAutomation
                 Driver.Instance.SwitchTo().ActiveElement().SendKeys(PostBody);
                 Driver.Instance.SwitchTo().DefaultContent();
 
-                Driver.Instance.FindElement(By.CssSelector("#publish")).Click();
+                Driver.Instance.FindElement(By.Id("publish")).Click();
 
 
             }
