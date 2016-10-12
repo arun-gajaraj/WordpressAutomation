@@ -59,6 +59,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CreatepostTests.cs" />
+    <Compile Include="GridTests.cs" />
     <Compile Include="LoginTests.cs" />
     <Compile Include="PageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -21,6 +21,7 @@ namespace WordPressTests
         {
             LoginPage.GoTo();
             LoginPage.LogInAs("arun").withPassword("arun123").Login();
+            
             Assert.IsTrue(Driver.Instance.Title.StartsWith("Dashboard ‹"));
             Assert.IsTrue(DashboardPage.IsAt, "Failed to Login");
         }
