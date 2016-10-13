@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WordpressAutomation;
+using WordpressAutomation;
 
 namespace WordPressTests
 {
@@ -26,6 +27,7 @@ namespace WordPressTests
 
             ListPostsPage.GoTo(WordpressAutomation.ListPostsPage.PostType.Page);
             ListPostsPage.Selectpost();
+                  
 
 
         }

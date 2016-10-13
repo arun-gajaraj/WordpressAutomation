@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WordpressAutomation;
 using OpenQA.Selenium;
 using System.Linq;
+using WordpressAutomation.Util;
+
 
 namespace WordPressTests
 {
@@ -14,6 +16,7 @@ namespace WordPressTests
         public void Init()
         {
             Driver.Initialize();
+            FileLogger.WriteToLog("Driver Initialized"); 
         }
 
         [TestMethod]
@@ -24,11 +27,13 @@ namespace WordPressTests
             
             Assert.IsTrue(Driver.Instance.Title.StartsWith("Dashboard ‹"));
             Assert.IsTrue(DashboardPage.IsAt, "Failed to Login");
+            FileLogger.WriteToLog("Logged In");      
         }
 
         [TestCleanup]
         public void Cleanup() {
             Driver.Close();
+            FileLogger.WriteToLog("Closed"); 
         }
         
     }
