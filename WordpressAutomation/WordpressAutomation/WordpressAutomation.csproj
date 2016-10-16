@@ -36,6 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="RelevantCodes.ExtentReports">
+      <HintPath>..\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -64,6 +67,7 @@
     <Compile Include="Util\ConsoleLogger.cs" />
     <Compile Include="Util\FileLogger.cs" />
     <Compile Include="Util\ILogger.cs" />
+    <Compile Include="Util\ReportGen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

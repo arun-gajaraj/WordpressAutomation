@@ -9,15 +9,10 @@ using WordpressAutomation.Util;
 namespace WordPressTests
 {
     [TestClass]
-    public class LoginTests
+    public class LoginTests : WordPressTest
     {
 
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-            FileLogger.WriteToLog("Driver Initialized"); 
-        }
+
 
         [TestMethod]
         public void login()
@@ -30,11 +25,7 @@ namespace WordPressTests
             FileLogger.WriteToLog("Logged In");      
         }
 
-        [TestCleanup]
-        public void Cleanup() {
-            Driver.Close();
-            FileLogger.WriteToLog("Closed"); 
-        }
+
         
     }
 }

@@ -10,14 +10,9 @@ using WordpressAutomation;
 namespace WordPressTests
 {
     [TestClass]
-    public class CreatepostTests
+    public class CreatepostTests : WordPressTest
     {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-            Driver.Instance.Manage().Window.Maximize();
-        }
+
 
         [TestMethod]
         public void Can_create_a_new_post()
@@ -46,13 +41,5 @@ namespace WordPressTests
         }
 
         
-
-        [TestCleanup]
-        public void Cleanup()
-        {
-            Driver.Instance.Quit();
-            //Driver.Close();
-            
-        }
     }
 }

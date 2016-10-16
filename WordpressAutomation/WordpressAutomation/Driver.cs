@@ -18,5 +18,13 @@ namespace WordpressAutomation
         {
             Instance.Close();
         }
+
+        public static string BaseAddress 
+        {
+            get 
+            {
+                return @"http://localhost:8080/wp/"; 
+            }
+        }
     }
-}
+}         

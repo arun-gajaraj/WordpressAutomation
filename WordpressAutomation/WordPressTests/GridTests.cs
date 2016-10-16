@@ -12,7 +12,7 @@ using WordpressAutomation;
 namespace WordPressTests
 {
     [TestClass]
-    public class GridTests
+    public class GridTests : WordPressTest
     {
         static IWebDriver driver;
         [TestInitialize]
@@ -30,16 +30,12 @@ namespace WordPressTests
         }
 
         [TestMethod]
-        public void Open() 
+        public void Navigate_to_Google_In_Grid() 
         {
             driver.Navigate().GoToUrl("http://www.google.com");
         }
 
-        [TestCleanup]
-        public void Cleanup() 
-        {
-            driver.Close();
-        }
+
 
     }
 }
