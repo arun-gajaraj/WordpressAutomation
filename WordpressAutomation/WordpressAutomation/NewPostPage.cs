@@ -9,9 +9,10 @@ namespace WordpressAutomation
 {
     public class NewPostPage
     {
+        
         public static void Goto()
         {
-            Driver.Instance.FindElement(By.LinkText("Write your first blog post")).Click();
+         LeftNavigation.Pages.AddNew.Select();   
         }
 
         public static CreatepostCommand createPost(string v)
