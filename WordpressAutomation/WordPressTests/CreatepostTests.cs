@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WordpressAutomation;
+using System.Configuration;
 
 namespace WordPressTests
 {
@@ -17,13 +18,10 @@ namespace WordPressTests
         [TestMethod]
         public void Can_create_a_new_post()
         {
-            LoginPage.GoTo();
-
-            LoginPage.LogInAs("arun").withPassword("arun123").Login();
 
 
-            string title = "New Post Tiltle";
-            string body = "The BODY!";
+            string title = ConfigurationManager.AppSettings["newTitle"];
+            string body = ConfigurationManager.AppSettings["postBody"]; ;
             NewPostPage.Goto();
             NewPostPage.createPost(title)
                 .withBody(body)

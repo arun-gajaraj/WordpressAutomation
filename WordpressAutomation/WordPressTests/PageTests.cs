@@ -17,8 +17,6 @@ namespace WordPressTests
         [TestMethod]
         public void Can_create_a_new_post()
         {
-            LoginPage.GoTo();
-            LoginPage.LogInAs("arun").withPassword("arun123").Login();
 
             ListPostsPage.GoTo(WordpressAutomation.ListPostsPage.PostType.Page);
             ListPostsPage.Selectpost();

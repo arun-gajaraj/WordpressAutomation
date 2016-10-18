@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WordpressAutomation
@@ -45,6 +46,7 @@ namespace WordpressAutomation
                 Driver.Instance.SwitchTo().ActiveElement().SendKeys(PostBody);
                 Driver.Instance.SwitchTo().DefaultContent();
 
+                Thread.Sleep(1000);
                 Driver.Instance.FindElement(By.Id("publish")).Click();
 
 
@@ -53,7 +55,14 @@ namespace WordpressAutomation
 
         public static void GoToNewPost()
         {
+            try
+            {
             Driver.Instance.FindElement(By.LinkText("View post")).Click();
+            }
+            catch(NoSuchElementException e)
+            {
+                Driver.Instance.FindElement(By.LinkText("View page")).Click();
+            }
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WordpressAutomation;
 using WordpressAutomation.Util;
+
 
 namespace WordPressTests
 {
@@ -20,6 +22,12 @@ namespace WordPressTests
             Driver.Initialize();
             Driver.Instance.Manage().Window.Maximize();
             FileLogger.WriteToLog("Driver Initialized");
+
+            string username = ConfigurationManager.AppSettings["username"];
+            string password = ConfigurationManager.AppSettings["password"];
+
+            LoginPage.GoTo();
+            LoginPage.LogInAs(username).withPassword(password).Login();
         }
 
         /// <summary>
