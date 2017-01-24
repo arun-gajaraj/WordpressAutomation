@@ -19,9 +19,14 @@ namespace WordPressTests
         [TestInitialize]
         public void Init()
         {
-            Driver.Initialize();
+            Driver.Initialize();            
             Driver.Instance.Manage().Window.Maximize();
+            //Logger
             FileLogger.WriteToLog("Driver Initialized");
+
+            //ExtentReport
+            Reports.InitExtenetReport();
+
 
             string username = ConfigurationManager.AppSettings["username"];
             string password = ConfigurationManager.AppSettings["password"];

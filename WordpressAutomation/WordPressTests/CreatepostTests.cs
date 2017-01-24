@@ -20,7 +20,8 @@ namespace WordPressTests
         {
 
 
-            string title = ConfigurationManager.AppSettings["newTitle"];
+            string title = DateTime.Now.ToString();
+                //ConfigurationManager.AppSettings["newTitle"];
             string body = ConfigurationManager.AppSettings["postBody"]; ;
             NewPostPage.Goto();
             NewPostPage.createPost(title)

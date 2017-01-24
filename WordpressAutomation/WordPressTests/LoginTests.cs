@@ -17,7 +17,6 @@ namespace WordPressTests
         [TestMethod]
         public void login()
         {
-            
             Assert.IsTrue(Driver.Instance.Title.StartsWith("Dashboard ‹"));
             Assert.IsTrue(DashboardPage.IsAt, "Failed to Login");
             FileLogger.WriteToLog("Logged In");      
